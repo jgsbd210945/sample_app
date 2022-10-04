@@ -70,5 +70,7 @@ class UserTest < ActiveSupport::TestCase
   test "password should have a minimum length" do
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
+    assert_select 'div#error_explanation'
+    assert_select 'div.field_with_errors'
   end
 end
