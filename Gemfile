@@ -11,6 +11,9 @@ gem "bootstrap-will_paginate", "1.0.0"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 
+gem "active_storage_validations", "0.9.8"
+gem "image_processing",           "1.12.2"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails", "~> 3.4.2"
 
@@ -84,4 +87,5 @@ end
 
 group :production do
   gem "pg", "~> 1.3.5"
+  gem "aws-sdk-s3", "1.114.0", require: false
 end
